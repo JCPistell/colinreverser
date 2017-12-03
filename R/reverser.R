@@ -5,9 +5,16 @@
 #' colin_reverser("foo")
 #' @importFrom magrittr "%>%"
 #' @export 
-colin_reverser <- function(toReverse) {
+colin_reverser <- function(toReverse, convert=TRUE) {
     split <- autoSplit(toReverse)
-    rev(split) %>% paste(collapse = "")
+    r <- rev(split) %>% paste(collapse = "")
+    if(convert) {
+        tryCatch(as.numeric(r),
+                 warning = function(c) return(r)
+                 )
+    } else {
+        r
+    }
 }
 
 # Helper function to make splitting easier
