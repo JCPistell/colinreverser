@@ -4,10 +4,12 @@
 \alias{colin_reverser}
 \title{Reverses a string or number}
 \usage{
-colin_reverser(toReverse)
+colin_reverser(toReverse, convert = TRUE)
 }
 \arguments{
 \item{toReverse}{A string or number}
+
+\item{convert}{A boolean to indicate if numbers should be converted back to numbers or left as strings.}
 }
 \value{
 the reverse of the provided string or number

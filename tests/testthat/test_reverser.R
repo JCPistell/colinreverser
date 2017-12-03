@@ -8,7 +8,7 @@ test_that("Strings are reversed correctly", {
 })
 
 test_that("Numbers are reversed correctly", {
-              expect_equal(colin_reverser(1234), "4321")
-              expect_equal(colin_reverser(3.14), "41.3")
-              expect_equal(colin_reverser(5), "5")
+              expect_equal(colin_reverser(1234), 4321)
+              expect_equal(colin_reverser(3.14), 41.3)
+              expect_equal(colin_reverser(5), 5)
 })
